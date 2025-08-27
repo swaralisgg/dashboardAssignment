@@ -1,0 +1,51 @@
+<div class="card-header fw-bold d-flex align-items-center">
+    <!-- Logo left of the title -->
+    <img src="./assets/images/your-accounts.png"
+         alt="Your Accounts"
+         class="me-2"
+         width="54" height="47">
+    <span>Your Accounts</span>
+  </div>
+    <div class="card accounts-card mt-4 shadow-sm mb-4">
+  
+  
+    <div class="card-body p-0">
+      <!-- Responsive wrapper for table -->
+      <div class="table-responsive">
+        <table class="table accounts-table mb-0">
+          <thead>
+            <tr>
+              <th class="text-start">Bank(Currency)</th>
+              <th class="text-start">Balance</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let acc of accounts">
+              <td class="account-name d-flex align-items-center">
+                <!-- Image before account name -->
+                <img [src]="acc.virtualWallet ? 'assets/images/wallet.png' : 'assets/images/rbc.png'"
+                     alt="Account Type"
+                     class="me-2"
+                     width="34" height="34">
+                <div>
+                  <h6 class="mb-0">{{ acc.accountName }}</h6>
+                  <small class="text-muted">Account: {{ acc.accountNumber }}</small>
+
+                </div>
+              </td>
+              <td class="account-balance fw-bold">
+                {{ acc.balance | currency: acc.currency }}
+                <br>
+                <span style="font-size: 12px">Updated on 26 Jan</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <button class="ac-button">Add Account</button>
+  </div>
+  

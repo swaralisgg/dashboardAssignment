@@ -1,0 +1,85 @@
+.qp-button{
+    background-color: #0a416b !important;
+    color: white;
+    border: 1px solid blue;
+    min-width: 140px;
+    min-height: 35px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+form{
+    font-size: 13px;
+
+}
+
+.form-label{
+    font-weight: bold;
+}
+
+.submit-button{
+    background-color: #0a416b !important;
+    color: white;
+    border: 1px solid blue;
+    min-width: 140px;
+    min-height: 35px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+
+h4{
+    color: #0a416b !important;
+}
+
+.card{
+    background-color: #e2ecf4;
+    border-top: 3px solid #0a416b !important;
+    min-height: 400px;
+    border: 1px solid white;
+    border-top: 3px solid blue
+}
+
+.card-sub-heading{
+    font-size: 10px;
+    font-weight: 600;
+    color: rgb(90, 89, 89);
+}
+
+.transfers-button{
+    background-color: white;
+    min-height: 35px;
+    cursor: pointer;
+    color: #0a416b !important;
+    border: 1px solid #0a416b !important;
+    min-width: 140px;
+    font-size: 13px;
+}
+
+.clear-link{
+    color: #0a416b ;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.text-danger.small {
+    font-size: 0.8rem;
+    margin-top: 4px;
+    display: block;
+  }
+  
+  /* Invalid input highlighting */
+  input.ng-touched.ng-invalid,
+  select.ng-touched.ng-invalid,
+  textarea.ng-touched.ng-invalid {
+    border-color: #dc3545 !important;
+    box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.1);
+  }
+  
+  /* Valid input highlighting */
+  input.ng-touched.ng-valid,
+  select.ng-touched.ng-valid,
+  textarea.ng-touched.ng-valid {
+    border-color: #198754 !important;
+    box-shadow: 0 0 0 0.2rem rgba(25, 135, 84, 0.1);
+  }

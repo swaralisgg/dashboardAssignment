@@ -1,0 +1,18 @@
+.footer {
+    font-size: 12px;
+    background-color: #5a5858;
+    padding: 10px;
+    color: white;
+    position: relative;
+ 
+  }
+
+
+  
+  .footer .nav-link {
+    padding: 0 8px;
+  }
+  
+  .footer .bi {
+    font-size: 18px;
+  }

@@ -1,0 +1,20 @@
+
+  .bg-light {
+    font-size: 0.875rem;
+  }
+  .flex-fill {
+    min-width: 180px;
+    padding: 4px 8px;
+  }
+  .navbar-nav {
+    gap: 2rem; /* adjust as needed */
+  }
+
+  .navbar{
+    background-color: #0e5184 !important;
+    font-size: 13px;
+  }
+
+  .navbar a{
+    color: white;
+  }

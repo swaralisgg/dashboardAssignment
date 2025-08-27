@@ -1,0 +1,46 @@
+
+.ac-button{
+    
+        background-color: #0a416b !important;
+        color: white;
+        border: 1px solid blue;
+        max-width: 140px;
+        margin-left: 10px;
+        min-height: 35px;
+        cursor: pointer;
+        font-size: 13px;
+    
+}
+/* Remove all default table borders */
+.accounts-table,
+.accounts-table th,
+.accounts-table td {
+  border: none !important;
+}
+
+/* Add only row dividers */
+.accounts-table tbody tr {
+  border-bottom: 1px solid #dee2e6; /* light gray separator */
+}
+
+/* Remove last row’s bottom border */
+.accounts-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+/* Header styling */
+.accounts-table thead tr {
+  border-bottom: 2px solid #dee2e6 !important; /* force line under headers */
+}
+
+.accounts-table thead th {
+  font-weight: 600;
+  text-align: left;
+  padding: 10px 12px;
+}
+
+/* Table cell */
+.accounts-table td {
+  padding: 10px 12px;
+  vertical-align: middle;
+}

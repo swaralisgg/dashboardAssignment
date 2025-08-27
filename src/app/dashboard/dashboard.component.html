@@ -1,0 +1,24 @@
+<div class="container-fluid py-5 px-5">
+    <div class="row mb-3">
+        <div class="col-md-8">
+          <h2>N and F Solutions</h2>
+        </div>
+        <div class="col-md-4 text-end">
+          <button routerLink="/suppliers" class="cp-button">Create Payment Order</button>
+        </div>
+      </div>
+    <div class="row mt-5">
+      <!-- Left: Accounts -->
+      <div class="col-md-6">
+        <app-accounts-list></app-accounts-list>
+      </div>
+  
+      <!-- Right: Quick Pay & Transfers -->
+      <div class="col-md-6">
+        <app-quick-pay-transfer></app-quick-pay-transfer>
+      </div>
+    </div>
+ <app-payment-orders></app-payment-orders>
+  </div>
+
+  

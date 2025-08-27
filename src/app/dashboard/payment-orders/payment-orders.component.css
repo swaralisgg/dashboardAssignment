@@ -1,0 +1,68 @@
+.view-all-link{
+    color: #0a416b;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.cp-button{
+
+        background-color: #0a416b !important;
+        color: white;
+        border: 1px solid blue;
+        min-width: 140px;
+        min-height: 35px;
+        cursor: pointer;
+        font-size: 13px;
+    
+}
+
+/* Make table responsive into cards on mobile */
+@media (max-width: 768px) {
+    .orders-table thead {
+      display: none; /* Hide headers */
+    }
+  
+    .orders-table tr {
+      display: block;
+      margin-bottom: 1rem;
+      border: 1px solid #dee2e6;
+      border-radius: 0.5rem;
+      padding: 0.75rem;
+    }
+  
+    .orders-table td {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.5rem 0;
+      border: none !important;
+    }
+  
+    .orders-table td::before {
+      content: attr(data-label);
+      font-weight: 600;
+      margin-right: 0.5rem;
+      color: #6c757d;
+    }
+  
+    .orders-table td.text-end {
+      justify-content: space-between;
+      text-align: left !important;
+    }
+  }
+  
+
+  li a{
+    color: #0a416b;
+    font-size: 14px;
+   
+  }
+
+  th{
+    background-color: #0a416b;
+    color: white;
+    font-size: 13px;
+  }
+
+  .card{
+    margin-top: 60px;
+  }

@@ -1,0 +1,96 @@
+<div class="container-fluid">
+    <div class="card p-3">
+      <div class="row mb-2 align-items-center">
+        <div class="col-auto">
+          <img src="./assets/images/formlogo.png" 
+               alt="Quick Pay" 
+               class="img-fluid" 
+               style="max-height: 39px;">
+        </div>
+        <div class="col">
+          <h4 class="mb-0">Quick Pay and Transfers</h4>
+        </div>
+      </div>
+  
+      <!-- Buttons row -->
+      <div class="row g-2">
+        <div class="col-6 col-md-auto">
+          <button class="qp-button" type="button">Quick Pay</button>
+        </div>
+        <div class="col-6 col-md-auto">
+          <button class="transfers-button" type="button">Transfers</button>
+        </div>
+      </div>
+  
+      <div class="row mt-3">
+        <p class="card-sub-heading">
+          Quick Pay allows you to process single payments. Create a payment order if you want to 
+          process multiple payments, upload an invoice or add additional details.
+        </p>
+      </div>
+  
+      <form [formGroup]="quickPayForm" (ngSubmit)="onSubmit()">
+        
+        <!-- Supplier -->
+        <div class="mb-3">
+          <label class="form-label">Supplier*</label>
+          <select class="form-select" formControlName="supplier">
+            <option value="" disabled>Select a supplier</option>
+            <option *ngFor="let s of suppliers" [value]="s.id">{{ s.name }}</option>
+          </select>
+          <div *ngIf="(quickPayForm.get('supplier')?.touched || submitted) && quickPayForm.get('supplier')?.hasError('required')" class="text-danger small">
+            Supplier is required.
+          </div>
+        </div>
+      
+        <!-- Amount -->
+        <div class="mb-3">
+          <label class="form-label">Amount*</label>
+          <input type="number" class="form-control" formControlName="amount" placeholder="Enter amount">
+          <div *ngIf="(quickPayForm.get('amount')?.touched || submitted) && quickPayForm.get('amount')?.invalid" class="text-danger small">
+            <div *ngIf="quickPayForm.get('amount')?.hasError('required')">Amount is required.</div>
+            <div *ngIf="quickPayForm.get('amount')?.hasError('min')">Amount must be greater than 0.</div>
+            <div *ngIf="quickPayForm.get('amount')?.hasError('max')">Amount exceeds the allowed limit.</div>
+          </div>
+        </div>
+      
+        <!-- Payment Method -->
+        <div class="mb-3">
+          <label class="form-label">Payment Method*</label>
+          <select class="form-select" formControlName="paymentMethod">
+            <option value="" disabled>Select a method</option>
+            <option *ngFor="let pm of paymentMethods" [value]="pm.id">{{ pm.name }}</option>
+          </select>
+          <div *ngIf="(quickPayForm.get('paymentMethod')?.touched || submitted) && quickPayForm.get('paymentMethod')?.hasError('required')" class="text-danger small">
+            Payment method is required.
+          </div>
+        </div>
+      
+        <!-- Remittance Notes -->
+        <div class="mb-3">
+          <label class="form-label">Remittance Notes</label>
+          <textarea 
+            class="form-control" 
+            rows="3" 
+            formControlName="remittanceNotes"
+            placeholder="Enter any notes for this payment"></textarea>
+          <div *ngIf="(quickPayForm.get('remittanceNotes')?.touched || submitted) && quickPayForm.get('remittanceNotes')?.invalid" class="text-danger small">
+            <div *ngIf="quickPayForm.get('remittanceNotes')?.hasError('maxlength')">
+              Notes cannot exceed 200 characters.
+            </div>
+          </div>
+        </div>
+  
+        <!-- Actions -->
+        <div class="row">
+          <div class="col">
+            <a (click)="onClear()" class="clear-link">Clear</a>
+          </div>
+          <div class="col d-flex justify-content-end">
+            <button type="submit" class="submit-button">Pay Now</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  

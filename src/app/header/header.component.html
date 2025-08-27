@@ -1,0 +1,96 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="margin-left: 312px;padding-right: 35px ;padding-left: 35px;">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Dashboard</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle"  role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Payments and Transfers
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <!-- Trigger (just opens dropdown, no routerLink here) -->
+            <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Suppliers
+            </a>
+          
+            <!-- Dropdown Menu -->
+            <ul class="dropdown-menu">
+        
+              <li>
+                <a style="color: black;font-size:11px" class="dropdown-item" [routerLink]="'/suppliers'" routerLinkActive="active" (click)="$event.stopPropagation()">
+                  Suppliers
+                </a>
+              </li>
+              <li><a style="color: black;font-size:11px" class="dropdown-item" href="#">Another action</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a style="color: black;font-size:11px" class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Help Center</a>
+          </li>
+      
+        </ul>
+     
+        <ul class="navbar-nav ms-auto">
+            <li class="nav-item me-3">
+              <a class="nav-link active" aria-current="page" href="#">N and F solutions</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <mat-icon>settings</mat-icon>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+          </ul>
+  
+      </div>
+    </div>
+  </nav>
+  
+  <!-- Summary Strip -->
+  <div class="bg-light border-bottom py-4 px-5 d-flex flex-wrap text-center small">
+    <div class="flex-fill">
+      <strong>Pending Approval:</strong>
+      <br>
+      <span class="text-danger">0 Order(s), 0 Transfer(s)</span>
+    </div>
+    <div class="flex-fill">
+      <strong>Attention Required:</strong>
+      <br>
+      <span class="text-danger">8 Order(s)</span>
+    </div>
+    <div class="flex-fill">
+      <strong>Scheduled Payments:</strong>
+      <br>
+      <span>$69.00 🇨🇦 | $0.00 🇺🇸</span>
+    </div>
+    <div class="flex-fill">
+      <strong>Next Scheduled Payment Date:</strong>
+      <br>
+      <span>October 30th, 2024</span>
+    </div>
+    <div class="flex-fill">
+      <strong>Completed This Month:</strong>
+      <br>
+      <span>$0.00 🇨🇦 | $0.00 🇺🇸</span>
+    </div>
+  </div>
