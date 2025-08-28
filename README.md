@@ -66,6 +66,14 @@ The pay orders table below has a functionality to change tabs and display orders
 
 That method returns an Observable<Account[]>, which is a stream of account arrays coming from accountsSubject.
 
+## Change Detection Strategy 
+
+On push change detection strategy has been used in the following 3 components :- 
+Child components of dashboard :- 
+4)accounts-list
+5)quick-pay-transfer
+6)payment-orders
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
@@ -81,6 +89,11 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 ## Running unit tests
 
 Run `npm run test:watch'
+
+Test Cases have been written for these components :-
+
+4)accounts-list
+5)quick-pay-transfer
 
 ## Running the project on local server
 
